@@ -88,28 +88,64 @@ h2#qunit-banner.qunit-fail, #qunit-testrunner-toolbar {
 	font-size: small;
 }
 h2#qunit-userAgent {
-	font-family:"Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
-	background-color:#2b81af;
-	margin:0;
-	padding:0;
-	color:#fff;
-	font-size: small;
-	padding:0.5em 0 0.5em 2.5em;
-	text-shadow: rgba(0, 0, 0, 0.5) 2px 2px 1px;
+    font-family:"Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
+    background-color:#2b81af;
+    margin:0;
+    padding:0;
+    color:#fff;
+    font-size: small;
+    padding:0.5em 0 0.5em 2.5em;
+    text-shadow: rgba(0, 0, 0, 0.5) 2px 2px 1px;
+    border-bottom-right-radius:15px;
+    border-bottom-left-radius:15px;
+    -moz-border-radius-bottomright:15px;
+    -moz-border-radius-bottomleft:15px;
+    -webkit-border-bottom-right-radius:15px;
+    -webkit-border-bottom-left-radius:15px;
 }
 p#qunit-testresult{
-	font-family:"Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
-	margin:0;
-	font-size: small;
-	color:#2b81af;
-	border-bottom-right-radius:15px;
-	border-bottom-left-radius:15px;
-	-moz-border-radius-bottomright:15px;
-	-moz-border-radius-bottomleft:15px;
-	-webkit-border-bottom-right-radius:15px;
-	-webkit-border-bottom-left-radius:15px;
-	background-color:#D2E0E6;
-	padding:0.5em 0.5em 0.5em 2.5em;
+    font-family:"Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
+    margin:0;
+    font-size: small;
+    color:#2b81af;
+    border-bottom-right-radius:15px;
+    border-bottom-left-radius:15px;
+    -moz-border-radius-bottomright:15px;
+    -moz-border-radius-bottomleft:15px;
+    -webkit-border-bottom-right-radius:15px;
+    -webkit-border-bottom-left-radius:15px;
+    background-color:#D2E0E6;
+    padding:0.5em 0.5em 0.5em 2.5em;
+}
+p#qunit-bannertestresult-pass{
+    font-family:"Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
+    margin:0;
+    font-size: small;
+    color:#C6E746;
+    border-bottom: solid thin white;
+    border-top-right-radius:15px;
+    border-top-left-radius:15px;
+    -moz-border-radius-topright:15px;
+    -moz-border-radius-topleft:15px;
+    -webkit-border-top-right-radius:15px;
+    -webkit-border-top-left-radius:15px;
+    background-color:#2b81af;
+    padding:0.5em 0.5em 0.5em 2.5em;
+}
+p#qunit-bannertestresult-fail{
+    font-family:"Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
+    margin:0;
+    font-size: small;
+    color: #D2E0E6;
+    border-bottom: solid thin white;
+    border-top-right-radius:15px;
+    border-top-left-radius:15px;
+    -moz-border-radius-topright:15px;
+    -moz-border-radius-topleft:15px;
+    -webkit-border-top-right-radius:15px;
+    -webkit-border-top-left-radius:15px;
+    background-color: #EE5757;
+    padding:0.5em 0.5em 0.5em 2.5em;
 }
 strong b.fail{
 	color:#710909;

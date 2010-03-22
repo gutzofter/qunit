@@ -543,6 +543,20 @@ function done() {
 		}
 
 		result.innerHTML = html;
+
+		var bannerResult = id("qunit-bannertestresult");
+
+		if ( !bannerResult ) {
+            bannerResult = document.createElement("p");
+            banner.className = (config.stats.bad ? "qunit-fail" : "qunit-pass");
+			bannerResult.id = (config.stats.bad ? "qunit-bannertestresult-fail" : "qunit-bannertestresult-pass");
+			bannerResult.className = "result";
+
+
+			tests.parentNode.insertBefore( bannerResult, tests );
+		}
+
+		bannerResult.innerHTML = html;
 	}
 
 	QUnit.done( config.stats.bad, config.stats.all );
