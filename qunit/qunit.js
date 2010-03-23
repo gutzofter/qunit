@@ -15,8 +15,8 @@ var QUnit = {
 	// Initialize the configuration options
 	init: function() {
 		config = {
-			stats: { all: 0, bad: 0 },
-			moduleStats: { all: 0, bad: 0 },
+			stats: {all: 0, bad: 0},
+			moduleStats: {all: 0, bad: 0},
 			started: +new Date,
 			blocking: false,
 			autorun: false,
@@ -53,7 +53,7 @@ var QUnit = {
 
 			config.currentModule = name;
 			config.moduleTestEnvironment = testEnvironment;
-			config.moduleStats = { all: 0, bad: 0 };
+			config.moduleStats = {all: 0, bad: 0};
 
 			QUnit.moduleStart( name, testEnvironment );
 		});
@@ -393,7 +393,7 @@ var config = {
 
 // Load paramaters
 (function() {
-	var location = window.location || { search: "", protocol: "file:" },
+	var location = window.location || {search: "", protocol: "file:"},
 		GETParams = location.search.slice(1).split('&');
 
 	for ( var i = 0; i < GETParams.length; i++ ) {
@@ -537,7 +537,7 @@ function done() {
 
 		if ( !result ) {
 			result = document.createElement("p");
-			result.id = "qunit-testresult";
+			result.id = (config.stats.bad ? "qunit-testresult-fail" : "qunit-testresult-pass");
 			result.className = "result";
 			tests.parentNode.insertBefore( result, tests.nextSibling );
 		}
@@ -547,8 +547,7 @@ function done() {
 		var bannerResult = id("qunit-bannertestresult");
 
 		if ( !bannerResult ) {
-            bannerResult = document.createElement("p");
-            banner.className = (config.stats.bad ? "qunit-fail" : "qunit-pass");
+                        bannerResult = document.createElement("p");
 			bannerResult.id = (config.stats.bad ? "qunit-bannertestresult-fail" : "qunit-bannertestresult-pass");
 			bannerResult.className = "result";
 
