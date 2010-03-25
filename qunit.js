@@ -220,6 +220,7 @@ var QUnit = {
 						id("qunit-filter-missing").disabled = null;
 					}
 				}
+                                id("qunit-filter-pass").click();
 
 			} else {
 				for ( var i = 0; i < config.assertions.length; i++ ) {
@@ -450,6 +451,7 @@ addEvent(window, "load", function() {
 		filter.type = "checkbox";
 		filter.id = "qunit-filter-pass";
 		filter.disabled = true;
+                filter.checked = true;
 		addEvent( filter, "click", function() {
 			var li = document.getElementsByTagName("li");
 			for ( var i = 0; i < li.length; i++ ) {
@@ -694,6 +696,15 @@ QUnit.equiv = function () {
     var callers = []; // stack to decide between skip/abort functions
     var parents = []; // stack to avoiding loops from circular referencing
 
+
+    function hidePassedTests() {
+        var li = document.getElementsByTagName("li");
+        for ( var i = 0; i < li.length; i++ ) {
+            if ( li[i].className.indexOf("fail") > -1 && li[i].innerHTML.indexOf('missing test - untested code is broken code') > - 1 ) {
+                li[i].parentNode.parentNode.style.display = missing.checked ? "none" : "block";
+            }
+        }
+    }
 
     // Determine what is o.
     function hoozit(o) {
