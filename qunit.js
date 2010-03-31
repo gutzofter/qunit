@@ -382,6 +382,7 @@ var QUnit = {
 // Backwards compatibility, deprecated
 QUnit.equals = QUnit.equal;
 QUnit.same = QUnit.deepEqual;
+QUnit.should = QUnit.test;
 
 // Maintain internal state
 var config = {
